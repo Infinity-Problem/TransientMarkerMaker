@@ -1,0 +1,86 @@
+PRODUCT NAME:
+Transient Marker Maker for DaVinci Resolve
+
+
+SHORT DESCRIPTION:
+Automatically detect kick and snare hits in any audio file and place colored markers on your DaVinci Resolve timeline. Powered by AI stem separation.
+
+
+FULL DESCRIPTION:
+
+Transient Marker Maker is a DaVinci Resolve script that uses AI-powered stem separation to isolate drums from any audio file, then automatically detects kick and snare transients and places color-coded markers directly on your timeline clips.
+
+Stop manually scrubbing through audio to find every hit. Let the script do it in seconds.
+
+
+WHAT IT DOES
+
+- Separates drums from any audio file using Demucs (Meta's AI stem separator)
+- Detects kick and snare hits independently using frequency-band energy analysis
+- Places colored markers directly on the matching clip in your Resolve timeline
+- Deduplicates overlapping hits so you don't get double markers
+- Works with WAV, AIFF, MP3, and FLAC files
+
+
+FEATURES
+
+- Built-in UI accessible from Workspace > Scripts inside Resolve
+- Also runs as a standalone window from the command line
+- Adjustable sensitivity sliders for kick and snare independently
+- 16 marker colors to choose from for each instrument
+- Configurable minimum gap between markers
+- One-click clear to remove all generated markers
+- Cross-platform: Windows and macOS
+- GPU accelerated: blazing fast on NVIDIA GPUs, also supports Apple Silicon
+
+
+WHO IT'S FOR
+
+- Music video editors syncing visuals to drum hits
+- Editors cutting to the beat on promos, reels, and social content
+- Sound designers who need precise transient positions
+- Anyone tired of manually marking every kick and snare
+
+
+HOW IT WORKS
+
+1. Select your audio file in the UI
+2. The script runs Demucs to isolate the drum stem
+3. Kick transients are detected in the 20-120 Hz range
+4. Snare transients are detected in the 200-5000 Hz range
+5. Colored markers are placed on the matching clip in your active timeline
+
+With an NVIDIA GPU (e.g. RTX 4090), the entire process takes about 10-30 seconds per track. CPU processing takes 1-3 minutes.
+
+
+WHAT'S INCLUDED
+
+- Transient Marker Maker.py (the script)
+- install.bat (Windows one-click installer)
+- install.sh (macOS one-click installer)
+- README.txt (full documentation)
+
+
+REQUIREMENTS
+
+- DaVinci Resolve 18+ (Free or Studio)
+- Python 3.10+
+- NVIDIA GPU recommended on Windows / Apple Silicon on Mac
+- ~500 MB disk space for dependencies (one-time install)
+
+
+INSTALLATION
+
+Run the included installer (install.bat on Windows, install.sh on Mac). It installs all dependencies and copies the script to Resolve's script folder. Then restart Resolve and find it under Workspace > Scripts.
+
+
+---
+
+TAGS:
+davinci resolve, resolve script, transient detection, drum markers, beat markers, stem separation, demucs, audio editing, music video, kick detection, snare detection, timeline markers, resolve plugin, audio analysis, beat sync
+
+
+THUMBNAIL TEXT IDEAS:
+"Auto-detect every kick & snare"
+"AI-powered drum markers for Resolve"
+"Never manually mark a beat again"
