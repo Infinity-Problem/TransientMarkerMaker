@@ -145,7 +145,10 @@ def separate_drums(audio_path):
         audio_path,
     ]
     try:
-        result = subprocess.run(cmd, capture_output=True, text=True, timeout=600)
+        env = os.environ.copy()
+        env["PYTHONIOENCODING"] = "utf-8"
+        result = subprocess.run(cmd, capture_output=True, text=True, encoding="utf-8",
+                                errors="replace", timeout=600, env=env)
     except Exception as e:
         return None, str(e)
 
